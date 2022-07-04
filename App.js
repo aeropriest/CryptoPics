@@ -14,12 +14,12 @@ const theme = {
   },
 };
 export default function App() {
-  const [loaded] = useFonts({
+  let [loaded] = useFonts({
+    InterRegular: require("./assets/fonts/Inter-Regular.ttf"),
+    InterMedium: require("./assets/fonts/Inter-Medium.ttf"),
+    InterLight: require("./assets/fonts/Inter-Light.ttf"),
     InterBold: require("./assets/fonts/Inter-Bold.ttf"),
-    InterBold: require("./assets/fonts/Inter-Medium.ttf"),
-    InterBold: require("./assets/fonts/Inter-SemiBold.ttf"),
-    InterBold: require("./assets/fonts/Inter-Regular.ttf"),
-    InterBold: require("./assets/fonts/Inter-Light.ttf"),
+    InterSemiBold: require("./assets/fonts/Inter-SemiBold.ttf"),
   });
 
   if (!loaded) return null;
@@ -27,7 +27,8 @@ export default function App() {
     <NavigationContainer theme={theme}>
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName="home"
+        initialRouteName="ho
+        me"
       >
         <Stack.Screen name="Home" component={HomeScreen}></Stack.Screen>
         <Stack.Screen name="Details" component={DetailsScreen}></Stack.Screen>

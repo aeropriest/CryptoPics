@@ -3,7 +3,7 @@ import { View, Text, FlatList, SafeAreaView } from "react-native";
 import { COLORS, NFTData } from "./../../../constants/";
 import FocusedStatusBar from "../../Components/FocusedStatusBar";
 import HomeHeader from "../../Components/HomeHeader";
-import NFTCard from "../../Components/NftCard";
+import ArtCard from "../../Components/ArtCard";
 
 export default function HomeScreen() {
   return (
@@ -13,7 +13,7 @@ export default function HomeScreen() {
         <View style={{ zIndex: 0 }}>
           <FlatList
             data={NFTData}
-            renderItem={({ item }) => <NFTCard data={item} />}
+            renderItem={({ item }) => <ArtCard data={item} />}
             keyExtractor={(item) => item.id}
             showsVerticalScrollIndicator={false}
             ListHeaderComponent={<HomeHeader />}
@@ -30,7 +30,7 @@ export default function HomeScreen() {
           }}
         ></View>
         <View style={{ height: 300, backgroundColor: COLORS.primary }} />
-        <View style={{ backgroundColor: COLORS.white, flex: 1 }} />
+        <View style={{ backgroundColor: "red", flex: 1 }} />
       </View>
     </SafeAreaView>
   );

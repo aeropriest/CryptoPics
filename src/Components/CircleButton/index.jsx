@@ -16,8 +16,8 @@ export default function CircleButton({ imageUrl, handlePress, ...props }) {
         alignItems: "center",
         justifyContent: "center",
         ...SHADOWS.light,
-        onPress: { handlePress },
       }}
+      onPress={handlePress}
     >
       <Image
         source={imageUrl}

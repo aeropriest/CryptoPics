@@ -11,13 +11,13 @@ export const SIZES = {
   small: 12,
   font: 14,
   medium: 16,
-  large: 18,
+  large: 16,
   extraLarge: 24,
 };
 
 export const FONTS = {
   bold: "InterBold",
-  semiBold: "InterSemiBold",
+  semiBold: "Inter-SemiBold",
   medium: "InterMedium",
   regular: "InterRegular",
   light: "InterLight",
